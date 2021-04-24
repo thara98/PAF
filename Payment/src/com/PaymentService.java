@@ -23,7 +23,7 @@ public class PaymentService {
 	 {
 		return paymentObj.readPayments();	
 	 }
-	
+	//insert payment details
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -36,7 +36,7 @@ public class PaymentService {
 	 String output = paymentObj.insertPayment(paymentCardNo, paymentCvv, paymentExpireDate, paymentCardholderName);
 	return output;
 	}
-	
+	//update payment details
 	@PUT
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
